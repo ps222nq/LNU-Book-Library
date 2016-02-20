@@ -34,6 +34,7 @@
         .get(function (req, res) {
             res.type('json');
             GetBookResource(req.params.bookId, function (data) {
+                console.log("checking " + req.params.bookId);
                 res.send(data);
             });
         })

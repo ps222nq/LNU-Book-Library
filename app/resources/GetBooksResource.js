@@ -23,7 +23,7 @@
         callback(c);
 
         //console.log for debugging purposes
-        console.log(c);
+        //console.log(c);
     };
 
 }());
