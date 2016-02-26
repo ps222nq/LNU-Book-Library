@@ -23,7 +23,7 @@
 
             LibraryDAO.writeXMLFile(file);
 
-            //callback(file);
+            callback(file);
         });
 
     };

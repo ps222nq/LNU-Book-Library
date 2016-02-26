@@ -13,7 +13,7 @@
 
         // Get the entire file from the file system.
         readXMLFile: function(callback) {
-            fs.readFile("./books.xml", function(error, data){
+            fs.readFile("./app/resources/books.xml", function(error, data){
                 if(error){
                     return console.log(error);
                 }
@@ -29,7 +29,7 @@
         writeXMLFile: function(data) {
             var builder = new xml2js.Builder();
             var xml = builder.buildObject(data);
-            fs.writeFile("./books.xml", xml, function(error){
+            fs.writeFile("./app/resources/books.xml", xml, function(error){
                 if(error){
                     return console.log(error);
                 }
