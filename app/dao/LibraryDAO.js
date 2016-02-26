@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    var fs = require('fs');
+    var fs = require("fs");
 
     // Instructions how to use the xml2js
     // https://github.com/Leonidas-from-XIV/node-xml2js
@@ -13,7 +13,13 @@
 
         // Get the entire file from the file system.
         readXMLFile: function(callback) {
+            fs.readFile("../books.xml", "utf8", function(error, data){
+                if (error){
+                    return console.log(error);
+                }
 
+                return console.log(data);
+            });
         },
 
         // Write the entire file from the file system.
