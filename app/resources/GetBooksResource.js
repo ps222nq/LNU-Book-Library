@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var LibraryDAO = require('../dao/LibraryDAO');
+    var LibraryDAO = require("../dao/LibraryDAO");
 
     //loads the type representing a book
     var Book = require("./models/Books");
@@ -10,13 +10,15 @@
 
         var c = [];
 
+        //retrieve xml2js-converted object with books
         LibraryDAO.readXMLFile(function(error, data){
-            if(error){
+            if (error) {
                 console.log(error);
             }
 
-            var list = data.catalog.book;
-            list.forEach(function(bk){
+            //loop through array with books and instantiate new objects of type Book
+            var bookArray = data.catalog.book;
+            bookArray.forEach(function(bk){
                 var id = bk.$.id;
                 var author = bk.author[0];
                 var title = bk.title[0];
@@ -24,12 +26,12 @@
                 var price = bk.price[0];
                 var publishDate = bk.publish_date[0];
                 var description = bk.description[0];
+
+                //push to array for callback
                 c.push(new Book(id, title, author, genre, price, publishDate, description));
             });
 
-
-            //console.log(" c är: \n" + c);
-
+            //callback sends books to client
             callback(c);
         });
 
