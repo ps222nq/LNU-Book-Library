@@ -19,6 +19,11 @@
         // Write the entire file from the file system.
         writeXMLFile: function(data) {
 
+        },
+
+        //convert the XML file to a JSON object
+        convertToJSON: function(data){
+            return JSON.stringify(data);
         }
     };
 
