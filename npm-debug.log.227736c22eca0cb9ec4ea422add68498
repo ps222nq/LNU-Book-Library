@@ -1,0 +1,23 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.6
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart lnu-book-library@1.0.0
+6 verbose unsafe-perm in lifecycle true
+7 verbose stack Error: write EPIPE
+7 verbose stack     at Object.exports._errnoException (util.js:870:11)
+7 verbose stack     at exports._exceptionWithHostPort (util.js:893:20)
+7 verbose stack     at WriteWrap.afterWrite (net.js:763:14)
+8 verbose cwd /vagrant
+9 error Linux 3.13.0-77-generic
+10 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+11 error node v4.2.6
+12 error npm  v2.14.12
+13 error code EPIPE
+14 error errno EPIPE
+15 error syscall write
+16 error write EPIPE
+17 error If you need help, you may report this error at:
+17 error     <https://github.com/npm/npm/issues>
+18 verbose exit [ 1, true ]

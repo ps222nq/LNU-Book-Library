@@ -27,7 +27,14 @@
 
         // Write the entire file from the file system.
         writeXMLFile: function(data) {
-
+            var builder = new xml2js.Builder();
+            var xml = builder.buildObject(data);
+            fs.writeFile("./books.xml", xml, function(error){
+                if(error){
+                    return console.log(error);
+                }
+                console.log("appended file");
+            });
         },
 
         //convert the XML file to a JSON object
