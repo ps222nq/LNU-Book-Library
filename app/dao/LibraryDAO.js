@@ -13,12 +13,15 @@
 
         // Get the entire file from the file system.
         readXMLFile: function(callback) {
-            fs.readFile("../books.xml", "utf8", function(error, data){
-                if (error){
+            fs.readFile("./books.xml", function(error, data){
+                if(error){
                     return console.log(error);
                 }
+                var parser = new xml2js.Parser();
+                parser.parseString(data, function(err, res){
+                    callback(err, res);
+                });
 
-                return console.log(data);
             });
         },
 

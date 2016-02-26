@@ -12,11 +12,12 @@
 * @param {string} publishDate - The year the book was published
 * @param {string} description - A short description of the book's contents
 * */
-var Books = function(id, title, author, genre, publishDate, description) {
+var Books = function(id, title, author, genre, price, publishDate, description) {
     this.id = id;
     this.title = title;
     this.author = author;
     this.genre = genre;
+    this.price = price;
     this.publishDate = publishDate;
     this.description = description;
 };
