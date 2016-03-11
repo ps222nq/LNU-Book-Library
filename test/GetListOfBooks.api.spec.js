@@ -18,6 +18,15 @@ describe("Get List of Books", function () {
 
         });
 
+        it("responds with 404 status", function (done) {
+
+            request(app)
+                .get('/api/boosdfasdks')
+                .set('Accept', 'application/json')
+                .expect(404, done());
+
+        });
+
         it("responds with JSON", function (done) {
 
             request(app)
