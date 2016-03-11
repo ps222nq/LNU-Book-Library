@@ -30,9 +30,10 @@
                 //push to array for callback
                 c.push(new Book(id, title, author, genre, price, publishDate, description));
             });
-            console.log(c);
+
             //callback sends books to client
             callback(c);
+
         });
 
     };
