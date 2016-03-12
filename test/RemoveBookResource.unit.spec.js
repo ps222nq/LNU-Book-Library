@@ -14,7 +14,7 @@ describe("RemoveBookResource", function() {
 
     describe("test the deletion of books", function() {
 
-        it("test if reads from XML", function() {
+        it("reads the XML file from file storage", function() {
 
             var result = LibraryDao.readXMLFile(function(error, data) {
                 if (error) {
@@ -36,14 +36,21 @@ describe("RemoveBookResource", function() {
 
         });
 
-        //it("test if book has been deleted", function() {
+        //it("tests if book has been deleted", function() {
             // This should work by getting the array that is processed in RemoveBookResource
             // And comparing its length to a mockup array where a book has been deleted
             // But testing knowledge  and time allotted is insufficient at this time
 
        // });
 
-        it("test if writing back to filesystem works", function() {
+        it("does not crash if list contains no books", function() {
+            // This should work by exercising RemoveBookResource and pulling out the array called bookArray
+            // And comparing it to an empty mockup array
+
+
+        });
+
+        it("writes back to the filesystem", function() {
 
             var working = true;
             var foo = {
@@ -64,7 +71,6 @@ describe("RemoveBookResource", function() {
             });
 
             expect(working).to.equal(true);
-
 
          });
     });
