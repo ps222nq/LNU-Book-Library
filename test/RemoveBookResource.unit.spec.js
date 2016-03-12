@@ -37,16 +37,15 @@ describe("RemoveBookResource", function() {
         });
 
         //it("tests if book has been deleted", function() {
-            // This should work by getting the array that is processed in RemoveBookResource
-            // And comparing its length to a mockup array where a book has been deleted
-            // But testing knowledge  and time allotted is insufficient at this time
+        // This should work by getting the array that is processed in RemoveBookResource
+        // And comparing its length to a mockup array where a book has been deleted
+        // But testing knowledge  and time allotted is insufficient at this time
 
-       // });
+        // });
 
         it("does not crash if list contains no books", function() {
             // This should work by exercising RemoveBookResource and pulling out the array called bookArray
             // And comparing it to an empty mockup array
-
 
         });
 
@@ -54,7 +53,7 @@ describe("RemoveBookResource", function() {
 
             var working = true;
             var foo = {
-                country : "Sweden",
+                country: "Sweden",
                 capital: "Stockholm",
                 flagColors: ["blue", "yellow"],
                 weather: "cold"
@@ -63,8 +62,8 @@ describe("RemoveBookResource", function() {
             var builder = new xml2js.Builder();
             builder.buildObject(foo);
 
-            fs.writeFile("./dummyXMLFile.xml", xml, function(error){
-                if (error){
+            fs.writeFile("./dummyXMLFile.xml", xml, function(error) {
+                if (error) {
                     working = false;
                     return console.log(error)
                 }
@@ -72,7 +71,7 @@ describe("RemoveBookResource", function() {
 
             expect(working).to.equal(true);
 
-         });
+        });
     });
-    });
+
 });
