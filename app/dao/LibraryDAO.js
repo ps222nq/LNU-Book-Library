@@ -34,6 +34,8 @@
                 if (error) {
                     return console.log(error);
                 }
+
+                console.log("file written.");
             });
         }
     };

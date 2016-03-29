@@ -13,12 +13,17 @@
 * @param {string} description - A short description of the book's contents
 * */
 var Books = function(id, title, author, genre, price, publishDate, description) {
+
+    //bug fix for "$-bug": id is undefined from LibraryAPI.js line 32 otherwise
+    this.$ = {id:id};
+
+    //Non-bugfix book properties
     this.id = id;
     this.title = title;
     this.author = author;
     this.genre = genre;
     this.price = price;
-    this.publishDate = publishDate;
+    this.publish_date = publishDate;
     this.description = description;
 };
 

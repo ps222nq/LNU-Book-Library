@@ -1,3 +1,4 @@
+/*
 var expect    = require("chai").expect;
 var AddSimpleFunction = require("../app/AddSimpleFunction");
 
@@ -16,3 +17,4 @@ describe("Simple addition", function () {
         });
     });
 });
+*/
